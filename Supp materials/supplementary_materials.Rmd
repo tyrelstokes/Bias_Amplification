@@ -326,7 +326,7 @@ ggplot(results_fig6[results_fig6$model == "Y ~ A + BAV",],aes(x=type,y=sim, fill
 
 
 
-```{r fig 6b plot}
+```{r fig 6b plot, echo = FALSE}
 
 fig_6b <- function(mat_a,mat_a1, mat_b, mat_b1, mat_c, mat_c1, Ba,gu1,gu2,sigA1,sigA2){
 
@@ -727,7 +727,11 @@ fig_6b(mat_a,mat_a1, mat_b, mat_b1, mat_c, mat_c1, Ba,gu1,gu2,sigA1,sigA2)
 
 ### Real Data Simulation: Figure 8 Code
 
-First we will clean the data.
+First we will load the data. The data can be downloaded at the following link: https://dataverse.no/dataset.xhtml?persistentId=doi:10.18710/R2KJHK
+
+It was puplished originally as part of the study, Examining the effects of an eHealth intervention from infant age 6 to 12 months on child eating behaviors and maternal feeding practices one year after cessation: The Norwegian randomized controlled trial Early Food for Future Health by Helle et al (2019).
+
+To use this code, save the data in SPSS form from the link and call the file "food_24.sav". Of course you may download it in a different format and load it otherwise then simply code out the first line in the next block.
 
 ```{r}
 df <- read.spss("food_24.sav", to.data.frame=TRUE)
